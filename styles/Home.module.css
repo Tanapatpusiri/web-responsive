@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
+
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400&family=Playfair+Display&display=swap');
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
+.NavName{
+  width: 10%;
+}
+
+.NavTextName{
+  font-family: 'Playfair Display', serif;
+  color: #0E204E;
+  font-weight: bolder;
+  margin-top: 15px;
+}
+
+.NavMenu{
+  font-family: 'Manrope', sans-serif;
+  color: #0E204E;
+  cursor: pointer;
+}
+
+.TextPage1{
+  font-family: "Playfair Display";
+  
+}
+.TextPage2{
+  font-family: "Playfair Display";
+  color: #0E204E;
+  font-weight: bolder;
+}
+
+.TextMoBilePage2{
+    font-family: 'Manrope', sans-serif; 
+}
+
+.TextRectanglePage2{
+  font-family: 'Manrope', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.DivImage{  
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.ImageMobile{
+  filter: brightness(60%);
+}
+
+.DivTextPage2{
+  width: 40%; 
+}
+
+
+.DivTextPage3{
+  color: white;
+  font-family: "Playfair Display"; 
+  font-weight: bold;
+}
+
+.FontPage4{
+  font-family: Poppins;
+  color: #0E204E;
+}
+
+.FontPage4M{
+  font-family: Poppins;
+  color: #ffffff;
+}
+
+
+.ImagePage4{
+
+  align-items: center;
+  justify-content: center;
+}
+
+.ImagePage1{
+  width: 120%;
+  height: auto;
+  /* height: fit-content; */
+  z-index: -1;
+  position: relative;
+}
+
+.TextPage7{
+  width: 700px;
+}
+
+.FooterImage{
+  position: absolute;
+  z-index: -1;
+}
+
+
+
+

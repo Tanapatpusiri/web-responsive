@@ -4,168 +4,52 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400&family=Playfair+Display&display=swap');
 
-.NavName{
-  width: 10%;
-  margin-left: 50px;
+
+body, html{
+  overflow-x: hidden;
+  padding:0;
+  margin: 0;
 }
 
-.NavTextName{
-  font-family: 'Playfair Display', serif;
-  font-size: 18px;
+body{
+  overflow-y: hidden;
 }
 
-.NavText{
-  font-family: 'Manrope', sans-serif;
-}
-
-.NavMenu{
-  margin-top: 10px;
-  font-family: 'Manrope', sans-serif;
-  display: flex;
-  justify-content:space-between;
-  justify-items: center;
-  cursor: pointer;
-}
-
-.Nav{
-  width: 100%;
-  top: 0;
-  margin: auto;
-}
-.DivButton{
-  display: flex;
-  /* justify-items: center; */
-  justify-content: flex-end;
-  align-items: flex-end;
-  margin-top: 15px;
-  padding-right: 25px;
-}
-
-/* page1 */
-.DivImage{  
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-}
-
-.Button{
-  background-color: #0E204E;
-}
-
-
-.DivRectangle{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 50%;
-
-}
-
-.RectanglePage1{
-background-color: #0E204E;
-color: white;
- height: 50%; 
- width: 65%; 
-z-index: 1;
-padding: 25px;
-
-}
-
-
-
-
-/* page2 */
-.RecTanglePage2{
-  background-color: #0E204E;
-  color: white;
-  height: 89.5%; 
-  width: 65%; 
-  z-index: 1;
-  padding: 25px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  }
-
-.DivTextPage2{
-  width: 40%;
-  
-}
-
-.DivLeftPage2{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.DivPage2{
-  display: flex;
-  justify-content: center;
-  /* align-items: center; */
-}
-
-.TextRectanglePage2{
-  font-family: 'Manrope', sans-serif;
-  
-}
-
-
-
-/* page3 */
-.Page3{
-  background-color: #0E204E;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-
-
-.DivTextPage3{
-  width: 30%;
-  color: white;
-  
-}
-
-.DivLeftPage3{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.DivPage3{
-    display: flex;
-}
-
-.DivRightPage3{
-  display: flex;
-  box-shadow: rgb(255, 22, 22) 0px 7px 29px 0px;
-  width: 100%;
-}
-
-.RecTanglePage3{
-  background-color: #ffffff;
-  padding: 77px;
-  }
-
-.TextRectanglePage3{
-  font-family: 'Manrope', sans-serif;
-  color:#0E204E;
-  
-}
-
-.RecTanglePage3{
-   width: 23%;   
-  }
-
-
-
-.DivImagePage3{
-padding-top: 5px;
-}
-
-
-
-.Page1,.Page2,.Page3{
+.Page1,.Page2,.Page3,.Page4,.Page5,.Page6{
   height: 100vh;
+}
+.Page6Mobile{
+  height: 30vh;
+}
+
+.Page7Mobile{
+  height: 70vh;
+}
+
+.Page7{
+  height: 70vh;
+}
+
+.Footer{
+  height: 35vh;
+
+}
+
+.Page3Background{
+  background-image: url("../image/page3.png");
+  z-index: -1;
+  background-repeat: no-repeat;
+  ;
+}
+
+.Footer{
+  margin-top: 250px;
+  background-image: url("../image/Footer.png");
+  z-index: -1;
+  width: 100%;
+height: fit-content;
+}
+
+.FooterMobile{
+  height: 15vh;
 }

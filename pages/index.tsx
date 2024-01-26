@@ -1,23 +1,26 @@
 import Head from "next/head";
-import { Inter } from "next/font/google";
 import Button from '@mui/material/Button';
-import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
-import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Unstable_Grid2';
 import Image from "next/image";
 import styles from "@/styles/Home.module.css";
-import { ListItem } from "@mui/material";
-import { MenuItem } from '@mui/material';
-
-
-import page1 from '../image/page1.png';
-import page2 from '../image/page2.png';
-import page3 from '../image/ImagePage3.png';
-
+import Typography from '@mui/material/Typography';
+import Icon from '../image/iconnavbar.png'
+import TextField from '@mui/material/TextField';
+import Page1 from "./Page1";
+import Page2 from "./Page2";
+import Page3 from "./Page3";
+import Page4 from "./Page4";
+import Page5 from "./Page5";
+import Page6 from "./Page6";
+import Page7 from "./Page7";
+import Footer from "./Footer";
+import Navbar from "./Navbar";
 
 
 export default function Home() {
+
+
   return (
     <>
       <Head>
@@ -27,128 +30,15 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <div>
-          <nav>
-
-            <Box >
-              <Grid container spacing={3}>
-                <Grid xs>
-                  <div className="NavName">
-                    <p className="NavTextName">Pineapple Island </p>
-                  </div>
-                </Grid>
-                <Grid xs={3}>
-
-                  <div className="NavMenu">
-                    <p>About us</p>
-                    <p>What we do</p>
-                    <p>Project</p>
-                  </div>
-
-                </Grid>
-                <Grid xs>
-                  <div className="DivButton">
-
-
-                    <Button variant="contained" className="Button">Get in Touch</Button>
-                  </div>
-                </Grid>
-              </Grid>
-            </Box>
-
-          </nav>
-        </div>
-        <div className="Page1">
-
-          <Box >
-            <Grid container spacing={1}>
-              <Grid>
-                <div >
-                </div>
-              </Grid>
-              <Grid className="DivRectangle">
-
-                <div className="RectanglePage1" >
-                  <div className="TextRectangle">
-
-
-                    <h1> Pineapple Island: </h1>
-                    <h1> GenZ and Millenial</h1>
-                    <h1> Abode</h1>
-                    <p> a community that gives you a taste of happiness, a place you’ll love to live and an opportunity to build a home. </p>
-                  </div>
-                </div>
-              </Grid>
-              <Grid xs>
-                <div className="DivImage">
-                  <Image src={page1} priority width={1100} alt="" />
-                </div>
-              </Grid>
-            </Grid>
-          </Box>
-
-
-        </div>
-        <div className="Page2">
-          <div className="DivPage2" >
-            <Box >
-              <Grid container >
-                <Grid xs className="DivLeftPage2">
-                  <div className="DivTextPage2">
-                    <h1>
-                      About Pineapple Island
-                    </h1>
-                  </div>
-
-                </Grid>
-                <Grid >
-                  <Image src={page2} priority width={600} alt="" />
-
-                </Grid>
-                <Grid xs className="DivRectanglePage2">
-
-                  <div className="RecTanglePage2" >
-                    <div className="TextRectanglePage2">
-                      <p> Pineapple Island is the most sought-after  community in Ibadan that values and puts the needs of their clients first. It is a territory with loft complexes that creates a country life and homely feeling that is integrated with industrial development. A perfect, professional built  abode that gives you the true taste of beauty and happiness. </p>
-                    </div>
-                  </div>
-                </Grid>
-              </Grid>
-            </Box>
-
-
-          </div>
-        </div>
-
-
-        <div className="Page3">
-          <div className="DivPage3" >
-            <Box >
-              <Grid container >
-                <Grid xs={4} className="DivLeftPage3">
-                  <div className="DivTextPage3">
-                    <h1>
-                      Why Choose Pineapple Island
-                    </h1>
-                  </div>
-                </Grid>
-                <Grid xs >
-                <div className="DivRightPage3">
-                  <div className="RecTanglePage3" >
-                    <div className="TextRectanglePage3">
-                      <p> Pineapple Island is the most sought-after  community in Ibadan that values and puts the needs of their clients first. It is a territory with loft complexes that creates a country life and homely feeling that is integrated with industrial development. A perfect, professional built  abode that gives you the true taste of beauty and happiness. </p>
-                    </div>
-                  </div>
-                  <div className="DivImagePage3">
-                    <Image src={page3} priority width={500} alt="" />
-                  </div>
-
-                </div>
-                </Grid>
-              </Grid>
-            </Box>
-          </div>
-        </div>
+         <Navbar/>
+        <Page1/>
+        <Page2/>
+        <Page3/>
+        <Page4/>
+        <Page5/>
+        <Page6/>
+        <Page7/>
+        <Footer/>
       </main>
     </>
   );

@@ -12,110 +12,189 @@ import MobilePage1 from "../image/page1-mobile.png";
 export default function Page1() {
   return (
     <>
-      <div className="Page1" id="PageOne">
-        <Box>
-          <Grid
-            container
-            spacing={1}
-            sx={{ display: "flex", alignItems: "center" }}
-          >
-            <Grid sx={{ width: { xs: 10, lg: 80 } }}>
-              <div></div>
-            </Grid>
+      <Box
+        sx={{
+          display: { xs: "none", lg: "block" },
+        }}
+      >
+        <div className="Page1" id="PageOne">
+          <Box>
             <Grid
-              sx={{
-                color: { xs: "#ffff", lg: "#ffff" },
-                bgcolor: { xs: "none", lg: "#0E204E" },
-                zIndex: 1,
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                position:'relative',
-                right:{xs:0,md:-120,lg:-120},
-                height: { xs: 400, lg: 300 },
-                p: { xs: 0, lg: 9 },
-                pt: { lg: 7 },
-              }}
+              container
+              spacing={1}
+              sx={{ display: "flex", alignItems: "center" }}
             >
-              <Box>
+              <Grid sx={{ width: { xs: 10, lg: 80 } }}>
+                <div></div>
+              </Grid>
+              <Grid
+                sx={{
+                  color: { xs: "#ffff", lg: "#ffff" },
+                  bgcolor: { xs: "none", lg: "#0E204E" },
+                  zIndex: 1,
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  position: "relative",
+                  right: { xs: 0, md: -120, lg: -120 },
+                  height: { xs: 400, lg: 300 },
+                  p: { xs: 0, lg: 9 },
+                  pt: { lg: 7 },
+                }}
+              >
+                <Box>
+                  <Box
+                    sx={{
+                      width: { xs: 395, lg: 350 },
+                      mt: { xs: -10, lg: 0 },
+                      textAlign: { xs: "center", lg: "start" },
+                      ml: 1.5,
+                    }}
+                  >
+                    <Typography
+                      sx={{
+                        fontSize: { xs: 32, lg: 36 },
+                        fontWeight: { xs: "bold" },
+                        pb: { xs: 2.5, lg: 0 },
+                      }}
+                      className={styles.TextPage1}
+                      variant="h4"
+                      gutterBottom
+                    >
+                      Pineapple Island: GenZ and Millenial Abode
+                    </Typography>
+
+                    <Typography className={styles.TextPage1} gutterBottom>
+                      a community that gives you a taste of happiness , a place
+                      you’ll love to live and an opportunity to build a home.
+                    </Typography>
+                  </Box>
+                </Box>
+              </Grid>
+
+              <Grid
+                xs
+                className={styles.DivImage}
+                sx={{ width: { xs: 100, lg: 1000 } }}
+              >
                 <Box
                   sx={{
-                    width: { xs: 395, lg: 350 },
-                    mt: { xs: -10, lg: 0 },
-                    textAlign: { xs: "center", lg: "start" },
-                    ml:1.5
+                    display: { xs: "none", lg: "block" },
                   }}
                 >
-                  <Typography
-                    sx={{
-                      fontSize: { xs: 32, lg: 36 },
-                      fontWeight: { xs: "bold" },
-                      pb:{xs:2.5,lg:0}
-                    }}
-                    className={styles.TextPage1}
-                    variant="h4"
-                    gutterBottom
-                  >
-                    Pineapple Island: GenZ and Millenial Abode
-                  </Typography>
-
-                  <Typography className={styles.TextPage1} gutterBottom>
-                    a community that gives you a taste of happiness , a place
-                    you’ll love to live and an opportunity to build a home.
-                  </Typography>
+                  <Image
+                    src={page1}
+                    priority
+                    alt=""
+                    className={styles.ImagePage1}
+                  />
                 </Box>
-
-                <Box sx={{ display: "flex", justifyContent: "center" }}>
-                  <Button
-                    variant="contained"
-                    sx={{
-                      color: { xs: "#0E204E" },
-                      bgcolor: { xs: "#ffff" },
-                      mt: { xs: 5 },
-                      display: { lg: "none", xs: "block" },
-                    }}
-                  >
-                    {" "}
-                    Get in Touch
-                  </Button>
-                </Box>
-              </Box>
+              </Grid>
             </Grid>
+          </Box>
+        </div>
+      </Box>
 
+      {/* Moblie */}
+
+      <Box
+        sx={{
+          display: { xs: "block", lg: "none" },
+        }}
+      >
+        <div className="Page1" id="PageOne">
+          <Box>
             <Grid
-              xs
-              className={styles.DivImage}
-              sx={{ width: { xs: 100, lg: 1000 } }}
+              container
+              spacing={1}
+              sx={{ display: "flex", alignItems: "center" }}
             >
-              <Box
+              <Grid sx={{ width: { xs: 10, lg: 80 } }}>
+                <div></div>
+              </Grid>
+              <Grid
                 sx={{
-                 
-                  display: { xs: "none", lg: "block" },
-  
+                  color: { xs: "#ffff", lg: "#ffff" },
+                  bgcolor: { xs: "none", lg: "#0E204E" },
+                  zIndex: 1,
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  position: "relative",
+                  right: { xs: 0, md: -120, lg: -120 },
+                  height: { xs: 400, lg: 300 },
+                  p: { xs: 0, lg: 9 },
+                  pt: { lg: 7 },
                 }}
               >
-                <Image src={page1}  priority alt="" className={styles.ImagePage1} />
-              </Box>
+                <Box>
+                  <Box
+                    sx={{
+                      width: { xs: 395, lg: 350 },
+                      mt: { xs: -10, lg: 0 },
+                      textAlign: { xs: "center", lg: "start" },
+                      ml: 1.5,
+                    }}
+                  >
+                    <Typography
+                      sx={{
+                        fontSize: { xs: 32, lg: 36 },
+                        fontWeight: { xs: "bold" },
+                        pb: { xs: 2.5, lg: 0 },
+                      }}
+                      className={styles.TextPage1}
+                      variant="h4"
+                      gutterBottom
+                    >
+                      Pineapple Island: GenZ and Millenial Abode
+                    </Typography>
 
-              <Box
-                sx={{
-                  ml: { xs: -10 },
-                  display: { lg: "none", xs: "block" },
-                }}
+                    <Typography className={styles.TextPage1} gutterBottom>
+                      a community that gives you a taste of happiness , a place
+                      you’ll love to live and an opportunity to build a home.
+                    </Typography>
+                  </Box>
+
+                  <Box sx={{ display: "flex", justifyContent: "center" }}>
+                    <Button
+                      variant="contained"
+                      sx={{
+                        color: { xs: "#0E204E" },
+                        bgcolor: { xs: "#ffff" },
+                        mt: { xs: 5 },
+                        display: { lg: "none", xs: "block" },
+                      }}
+                    >
+                      Get in Touch
+                    </Button>
+                  </Box>
+                </Box>
+              </Grid>
+
+              <Grid
+                xs
+                className={styles.DivImage}
+                sx={{ width: { xs: 100, lg: 1000 } }}
               >
-                <Image
-                  className={styles.ImageMobile}
-                  src={MobilePage1}
-                  width={450}
-                  priority
-                  alt=""
-                  
-                />
-              </Box>
+                <Box
+                  sx={{
+                    ml: { xs: -10 },
+                    display: { lg: "none", xs: "block", md: "block" },
+                  }}
+                >
+                  <Image
+                    className={styles.ImageMobile}
+                    src={MobilePage1}
+                    width={450}
+                    priority
+                    alt=""
+                  />
+                </Box>
+              </Grid>
             </Grid>
-          </Grid>
-        </Box>
-      </div>
+          </Box>
+        </div>
+      </Box>
     </>
   );
 }

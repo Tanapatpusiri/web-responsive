@@ -20,14 +20,10 @@ import Page4_22 from "../image/page4-22.png";
 export default function Page5() {
   return (
     <>
-      <Box
-        className="Page5"
-        sx={{
-          pb: { xs: 90, lg: 50 },
-          mt: {xs:3,lg:0}
-        }}
-      >
+      <div>
         <Box
+          className="Page5"
+          id="Pagefive"
           sx={{
             display: { xs: "none", lg: "block" },
           }}
@@ -197,11 +193,15 @@ export default function Page5() {
             </Grid>
           </Box>
         </Box>
-
-        {/* Mobile */}
+      </div>
+      {/* Mobile */}
+      <div>
         <Box
+          className="Page5M"
+          id="PageFiveM"
           sx={{
             display: { xs: "block", lg: "none" },
+            pt: 30,
           }}
         >
           <Box>
@@ -292,7 +292,7 @@ export default function Page5() {
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
-              pt: 4,
+              pt: 2,
             }}
           >
             <Grid container spacing={2}>
@@ -331,7 +331,7 @@ export default function Page5() {
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
-              pt: 4,
+              pt: 2,
             }}
           >
             <Grid
@@ -380,7 +380,7 @@ export default function Page5() {
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
-              pt: 4,
+              pt: 2,
             }}
           >
             <Grid xs={1}>
@@ -428,7 +428,7 @@ export default function Page5() {
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
-              pt: 4,
+              pt: 2,
             }}
           >
             <Grid container spacing={2}>
@@ -466,7 +466,7 @@ export default function Page5() {
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
-              pt: 4,
+              pt: 2,
             }}
           >
             <Grid container spacing={2}>
@@ -490,7 +490,7 @@ export default function Page5() {
             </Grid>
           </Box>
         </Box>
-      </Box>
+      </div>
     </>
   );
 }

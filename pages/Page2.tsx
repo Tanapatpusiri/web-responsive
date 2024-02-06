@@ -3,24 +3,35 @@ import Grid from "@mui/material/Unstable_Grid2";
 import Image from "next/image";
 import styles from "@/styles/Home.module.css";
 import Typography from "@mui/material/Typography";
+import page1 from "../image/Image6-page5.png";
 import page2 from "../image/page2.png";
+import page3 from "../image/Image1-page5.png";
+import page4 from "../image/Image2-page5.png";
+import page5 from "../image/Image3-page5.png";
 
+import "bootstrap/dist/css/bootstrap.min.css";
+import Carousel from "react-bootstrap/Carousel";
 export default function Page2() {
   return (
     <>
       <Box sx={{ display: { lg: "block", xs: "none" } }}>
-        <div className="Page2" id="PageTwo">
-          <Box
-            sx={{
-              mt: { xs: -10, lg: 0 },
-            }}
-          >
+        <Box
+          className="Page2"
+          id="PageTwo"
+          sx={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          <Box sx={{}}>
             <Box>
               <Grid
                 container
                 sx={{
                   display: "flex",
-                  flexDirection: { xs: "column", lg: "row" },
+                  alignItems: "center",
+                  justifyContent: "center",
                 }}
               >
                 <Grid
@@ -31,15 +42,10 @@ export default function Page2() {
                     justifyContent: "center",
                   }}
                 >
-                  <Box
-                    className={styles.DivTextPage2}
-                    sx={{
-                      zIndex: { xs: 1 },
-                    }}
-                  >
-                    <Box sx={{ display: { xs: "none", lg: "block" } }}>
+                  <Box className={styles.DivTextPage2}>
+                    <Box sx={{ display: "block" }}>
                       <Typography
-                        sx={{ textAlign: { xs: "center" } }}
+                        sx={{ textAlign: "center" }}
                         className={styles.NavTextName}
                         variant="h4"
                         gutterBottom
@@ -51,14 +57,30 @@ export default function Page2() {
                 </Grid>
 
                 <Grid>
-                  <Box sx={{ display: { xs: "none", lg: "block" } }}>
-                    <Image src={page2} priority width={600} alt="" />
+                  <Box sx={{ display: "block" }}>
+                    <Carousel slide={false}>
+                      <Carousel.Item>
+                        <Image src={page1} priority width={600} alt="" />
+                      </Carousel.Item>
+                      <Carousel.Item>
+                        <Image src={page2} priority width={600} alt="" />
+                      </Carousel.Item>
+                      <Carousel.Item>
+                        <Image src={page3} priority width={600} alt="" />
+                      </Carousel.Item>
+                      <Carousel.Item>
+                        <Image src={page4} priority width={600} alt="" />
+                      </Carousel.Item>
+                      <Carousel.Item>
+                        <Image src={page5} priority width={600} alt="" />
+                      </Carousel.Item>
+                    </Carousel>
                   </Box>
                 </Grid>
                 <Grid
                   xs
                   sx={{
-                    bgcolor: { xs: "none", lg: "#0E204E" },
+                    bgcolor: "#0E204E",
                     color: "#ffff",
                     height: 510,
                     width: 500,
@@ -71,13 +93,13 @@ export default function Page2() {
                 >
                   <Box>
                     <Box className={styles.TextRectanglePage2}>
-                      <Box sx={{ display: { lg: "block", xs: "none" } }}>
+                      <Box sx={{ display: "block" }}>
                         <Typography
                           sx={{
                             p: 8,
-                            zIndex: { xs: 1 },
-                            color: { xs: "#000", lg: "#ffff" },
-                            display: { xs: "none", lg: "block" },
+
+                            color: "#ffff",
+                            display: "block",
                           }}
                           className={styles.TextRectanglePage2}
                           variant="subtitle2"
@@ -98,16 +120,16 @@ export default function Page2() {
               </Grid>
             </Box>
           </Box>
-        </div>
+        </Box>
       </Box>
 
       {/* Moblie */}
 
       <Box sx={{ display: { lg: "none", xs: "block" } }}>
-        <div className="Page2" id="PageTwo">
+        <div className="Page2M" id="PageTwoM">
           <Box
             sx={{
-              mt: { xs: -10, lg: 0 },
+              mt: -10,
             }}
           >
             <Box>
@@ -115,7 +137,7 @@ export default function Page2() {
                 container
                 sx={{
                   display: "flex",
-                  flexDirection: { xs: "column", lg: "row" },
+                  flexDirection: "column",
                 }}
               >
                 <Grid
@@ -129,13 +151,13 @@ export default function Page2() {
                   <Box
                     className={styles.DivTextPage2}
                     sx={{
-                      zIndex: { xs: 1 },
+                      zIndex: 1,
                     }}
                   >
-                    <Box sx={{ display: { lg: "none", xs: "block" } }}>
+                    <Box>
                       <Typography
                         sx={{
-                          textAlign: { xs: "center" },
+                          textAlign: "center",
                         }}
                         className={styles.TextPage2}
                         variant="h5"
@@ -145,7 +167,7 @@ export default function Page2() {
                       </Typography>
                       <Typography
                         sx={{
-                          textAlign: { xs: "center" },
+                          textAlign: "center",
                           mb: 3,
                         }}
                         className={styles.TextPage2}
@@ -159,7 +181,7 @@ export default function Page2() {
                 </Grid>
 
                 <Grid>
-                  <Box sx={{ display: { lg: "none", xs: "block" } }}>
+                  <Box>
                     <Image
                       className={styles.ImageMobile}
                       src={page2}
@@ -170,11 +192,11 @@ export default function Page2() {
                     <Typography
                       sx={{
                         p: 12,
-                        zIndex: { xs: 1 },
-                        color: { xs: "#ffff" },
+                        zIndex: 1,
+                        color: "#ffff",
                         position: "absolute",
                         mt: -50,
-                        textAlign: { xs: "center" },
+                        textAlign: "center",
                       }}
                       className={styles.TextRectanglePage2}
                       variant="subtitle2"
@@ -190,19 +212,6 @@ export default function Page2() {
                     </Typography>
                   </Box>
                 </Grid>
-                <Grid
-                  xs
-                  sx={{
-                    bgcolor: { xs: "none", lg: "#0E204E" },
-                    color: "#ffff",
-                    height: 510,
-                    width: 500,
-                    zIndex: 1,
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                  }}
-                ></Grid>
               </Grid>
             </Box>
           </Box>

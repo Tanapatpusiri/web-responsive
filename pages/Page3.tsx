@@ -12,36 +12,33 @@ export default function Page3() {
         <Box
           className="Page3"
           sx={{
-            mt: { xs: -52, lg: 0 },
-            mb: { lg: 5 },
             display: { xs: "none", lg: "block" },
           }}
         >
           <Box
             className="Page3Background"
             sx={{
-              display: { xs: "none", lg: "block" },
+              mt: 10,
             }}
           >
             <Box
               sx={{
                 display: "flex",
-                alignItems: { lg: "center", xs: "start" },
-                justifyContent: { lg: "none", xs: "center" },
-                pt: { xs: 0, lg: 30 },
+                alignItems: "center",
+                justifyContent: "center",
+                pt: 30,
               }}
             >
               <Box
                 sx={{
                   display: "flex",
-                  justifyContent: { xs: "center" },
                 }}
               >
                 <Box>
                   <Grid
                     container
                     sx={{
-                      flexDirection: { xs: "column", lg: "row" },
+                      flexDirection: "row",
                     }}
                   >
                     <Grid
@@ -55,13 +52,13 @@ export default function Page3() {
                       <Box>
                         <Box
                           sx={{
-                            display: { xs: "none", lg: "block" },
                             width: 200,
+                            mr: 10,
                           }}
                         >
                           <Typography
                             sx={{
-                              textAlign: { xs: "center", lg: "start" },
+                              textAlign: "start",
                               p: 1,
                               ml: -10,
                             }}
@@ -83,19 +80,19 @@ export default function Page3() {
                       >
                         <Box
                           sx={{
-                            bgcolor: { xs: "none", lg: "#ffff" },
-                            height: { xs: 5, lg: 320 },
-                            p: { lg: 8 },
-                            display: { lg: "flex" },
+                            bgcolor: "#ffff",
+                            height: 520,
+                            p: 8,
+                            display: "flex",
                             alignItems: "center",
                             justifyContent: "center",
                           }}
                         >
-                          <Box sx={{ display: { xs: "none", lg: "block" } }}>
+                          <Box>
                             <Typography
                               sx={{
-                                color: { xs: "#ffff", lg: "#0E204E" },
-                                width: { xs: 5, lg: 200 },
+                                color: "#0E204E",
+                                width: 200,
                                 pt: 10,
                               }}
                               className={styles.TextMoBilePage2}
@@ -112,7 +109,7 @@ export default function Page3() {
                           </Box>
                         </Box>
 
-                        <Box sx={{ display: { xs: "none", lg: "block" } }}>
+                        <Box>
                           <Image src={page3} priority width={600} alt="" />
                         </Box>
                       </Box>
@@ -123,13 +120,14 @@ export default function Page3() {
             </Box>
           </Box>
         </Box>
-
-        {/* Mobile */}
+      </div>
+      {/* Mobile */}
+      <div>
         <Box
+          className="Page3M"
           sx={{
             display: { xs: "block", lg: "none" },
             mt: -50,
-            mb: 30,
           }}
         >
           <Typography
@@ -160,9 +158,9 @@ export default function Page3() {
 
           <Typography
             sx={{
-              color: { xs: "#0E204E", lg: "#0E204E" },
-              width: { xs: 380, lg: 200 },
-              textAlign: { xs: "center" },
+              color: "#0E204E",
+              width: 380,
+              textAlign: "center",
               pl: 4,
               pt: 2,
             }}
@@ -179,7 +177,6 @@ export default function Page3() {
           <Grid xs>
             <Box
               sx={{
-                display: { xs: "block", lg: "none" },
                 pl: 3,
                 pt: 2,
               }}

@@ -1,11 +1,9 @@
-import Head from "next/head";
 import Button from "@mui/material/Button";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Unstable_Grid2";
 import Image from "next/image";
 import styles from "@/styles/Home.module.css";
 import Typography from "@mui/material/Typography";
-import TextField from "@mui/material/TextField";
 import InputBase from "@mui/material/InputBase";
 import copy from "../image/copyright.png";
 
@@ -13,11 +11,12 @@ export default function Footer() {
   return (
     <>
       <Box
+        className="Footer"
         sx={{
           display: { xs: "none", lg: "block" },
         }}
       >
-        <Box className="Footer">
+        <Box>
           <Box
             sx={{
               display: "flex",
@@ -29,7 +28,7 @@ export default function Footer() {
               container
               spacing={2}
               sx={{
-                pt:{xs:5,lg:8,md:2},
+                pt: 10,
               }}
             >
               <Grid xs={6}>
@@ -72,11 +71,7 @@ export default function Footer() {
               </Grid>
               <Grid xs={6}>
                 <Box>
-                  <Box
-                    sx={{
-                      
-                    }}
-                  >
+                  <Box sx={{}}>
                     <Typography
                       sx={{
                         color: "#ffff",
@@ -108,18 +103,19 @@ export default function Footer() {
                     </Typography>
                   </Box>
 
-                  <Grid style={{ background: "#ffff" }}
-                  sx={{
-                    width:300
-                  }}
+                  <Grid
+                    style={{ background: "#ffff" }}
+                    sx={{
+                      width: 300,
+                    }}
                   >
                     <InputBase
                       placeholder="Email"
                       sx={{
-                        width:180
+                        width: 180,
                       }}
                     />
-                    <Button style={{color:"#0E204E"}}>Subscribe</Button>
+                    <Button style={{ color: "#0E204E" }}>Subscribe</Button>
                   </Grid>
                 </Box>
               </Grid>
@@ -134,7 +130,7 @@ export default function Footer() {
         }}
       >
         <Box
-          className="FooterMobile"
+          className="FooterM"
           sx={{
             bgcolor: "#0E204E",
           }}

@@ -1,11 +1,11 @@
-import Head from "next/head";
+
 import Button from "@mui/material/Button";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Unstable_Grid2";
 import Image from "next/image";
 import styles from "@/styles/Home.module.css";
 import Typography from "@mui/material/Typography";
-
+import { Link } from "react-scroll";
 import page1 from "../image/page1.png";
 import MobilePage1 from "../image/page1-mobile.png";
 
@@ -24,38 +24,37 @@ export default function Page1() {
               spacing={1}
               sx={{ display: "flex", alignItems: "center" }}
             >
-              <Grid sx={{ width: { xs: 10, lg: 80 } }}>
+              <Grid sx={{ width: 80 }}>
                 <div></div>
               </Grid>
+
               <Grid
                 sx={{
-                  color: { xs: "#ffff", lg: "#ffff" },
-                  bgcolor: { xs: "none", lg: "#0E204E" },
+                  color: "#ffff",
+                  bgcolor: "#0E204E",
                   zIndex: 1,
                   display: "flex",
                   justifyContent: "center",
                   alignItems: "center",
                   position: "relative",
-                  right: { xs: 0, md: -120, lg: -120 },
-                  height: { xs: 400, lg: 300 },
-                  p: { xs: 0, lg: 9 },
-                  pt: { lg: 7 },
+                  right: { md: -120, lg: -120 },
+                  height: 300,
+                  p: 9,
+                  pt: 7,
                 }}
               >
                 <Box>
                   <Box
                     sx={{
-                      width: { xs: 395, lg: 350 },
-                      mt: { xs: -10, lg: 0 },
-                      textAlign: { xs: "center", lg: "start" },
+                      width: 350,
+                      mt: 0,
+                      textAlign: "start",
                       ml: 1.5,
                     }}
                   >
                     <Typography
                       sx={{
-                        fontSize: { xs: 32, lg: 36 },
-                        fontWeight: { xs: "bold" },
-                        pb: { xs: 2.5, lg: 0 },
+                        fontSize: 36,
                       }}
                       className={styles.TextPage1}
                       variant="h4"
@@ -72,16 +71,8 @@ export default function Page1() {
                 </Box>
               </Grid>
 
-              <Grid
-                xs
-                className={styles.DivImage}
-                sx={{ width: { xs: 100, lg: 1000 } }}
-              >
-                <Box
-                  sx={{
-                    display: { xs: "none", lg: "block" },
-                  }}
-                >
+              <Grid xs className={styles.DivImage} sx={{ width: 1000 }}>
+                <Box>
                   <Image
                     src={page1}
                     priority
@@ -102,45 +93,43 @@ export default function Page1() {
           display: { xs: "block", lg: "none" },
         }}
       >
-        <div className="Page1" id="PageOne">
+        <div className="Page1M" id="PageOne">
           <Box>
             <Grid
               container
               spacing={1}
               sx={{ display: "flex", alignItems: "center" }}
             >
-              <Grid sx={{ width: { xs: 10, lg: 80 } }}>
+              <Grid sx={{ width: 10 }}>
                 <div></div>
               </Grid>
               <Grid
                 sx={{
-                  color: { xs: "#ffff", lg: "#ffff" },
-                  bgcolor: { xs: "none", lg: "#0E204E" },
+                  color: "#ffff",
+                  bgcolor: "none",
                   zIndex: 1,
                   display: "flex",
                   justifyContent: "center",
                   alignItems: "center",
                   position: "relative",
-                  right: { xs: 0, md: -120, lg: -120 },
-                  height: { xs: 400, lg: 300 },
-                  p: { xs: 0, lg: 9 },
-                  pt: { lg: 7 },
+                  right: 0,
+                  height: 400,
                 }}
               >
                 <Box>
                   <Box
                     sx={{
-                      width: { xs: 395, lg: 350 },
-                      mt: { xs: -10, lg: 0 },
-                      textAlign: { xs: "center", lg: "start" },
+                      width: 395,
+                      mt: -10,
+                      textAlign: "center",
                       ml: 1.5,
                     }}
                   >
                     <Typography
                       sx={{
-                        fontSize: { xs: 32, lg: 36 },
-                        fontWeight: { xs: "bold" },
-                        pb: { xs: 2.5, lg: 0 },
+                        fontSize: 32,
+                        fontWeight: "bold",
+                        pb: 2.5,
                       }}
                       className={styles.TextPage1}
                       variant="h4"
@@ -159,27 +148,32 @@ export default function Page1() {
                     <Button
                       variant="contained"
                       sx={{
-                        color: { xs: "#0E204E" },
-                        bgcolor: { xs: "#ffff" },
-                        mt: { xs: 5 },
-                        display: { lg: "none", xs: "block" },
+                        color: "#0E204E",
+                        bgcolor: "#ffff",
+                        mt: 5,
+                        display: "block",
                       }}
                     >
-                      Get in Touch
+                      <Link
+                        to="PageSevenM"
+                        spy={true}
+                        smooth={true}
+                        offset={30}
+                        duration={500}
+                      >
+                        {" "}
+                        Get in Touch
+                      </Link>
                     </Button>
                   </Box>
                 </Box>
               </Grid>
 
-              <Grid
-                xs
-                className={styles.DivImage}
-                sx={{ width: { xs: 100, lg: 1000 } }}
-              >
+              <Grid xs className={styles.DivImage} sx={{ width: { xs: 100 } }}>
                 <Box
                   sx={{
-                    ml: { xs: -10 },
-                    display: { lg: "none", xs: "block", md: "block" },
+                    ml: -10,
+                    // display: { lg: "none", xs: "block", md: "block" },
                   }}
                 >
                   <Image

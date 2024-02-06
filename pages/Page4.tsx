@@ -24,9 +24,11 @@ export default function Page4() {
     <>
       <Box
         className="Page4"
+        id="Pagefour"
         sx={{
           pt: 5,
-          mt: { xs: -30, lg: 0 },
+          mt: 0,
+          display: { xs: "none", lg: "block" },
         }}
       >
         <Box
@@ -34,30 +36,7 @@ export default function Page4() {
             pb: 2,
           }}
         >
-          <Box
-            sx={{
-              display: { xs: "block", lg: "none" },
-            }}
-          >
-            <Typography
-              sx={{
-                textAlign: "center",
-                color: "#0E204E",
-                fontWeight: "bold",
-              }}
-              className={styles.TextPage1}
-              variant="h6"
-              gutterBottom
-            >
-              Pineapple Land Offers
-            </Typography>
-          </Box>
-
-          <Box
-            sx={{
-              display: { xs: "none", lg: "block" },
-            }}
-          >
+          <Box>
             <Typography
               sx={{
                 textAlign: "center",
@@ -72,15 +51,12 @@ export default function Page4() {
             </Typography>
           </Box>
         </Box>
-        <Box
-          sx={{
-            display: { xs: "none", lg: "block" },
-          }}
-        >
+        <Box>
           <Box
             sx={{
               display: "flex",
               justifyContent: "center",
+              alignItems: "center",
             }}
           >
             <Grid
@@ -280,21 +256,39 @@ export default function Page4() {
             </Grid>
           </Box>
         </Box>
+      </Box>
 
-
-{/* Mobile */}
-        <Box
-          sx={{
-            display: { xs: "block", lg: "none" },
-            
-          }}
-        >
+      {/* Mobile */}
+      <Box
+        sx={{
+          display: { xs: "block", lg: "none" },
+          pt: 5,
+        }}
+        className="Page4M"
+        id="PageFourM"
+      >
+        <Box>
+          <Typography
+            sx={{
+              textAlign: "center",
+              color: "#0E204E",
+              fontWeight: "bold",
+              pb: 2,
+            }}
+            className={styles.TextPage1}
+            variant="h6"
+            gutterBottom
+          >
+            Pineapple Land Offers
+          </Typography>
+        </Box>
+        <Box>
           <Box
             sx={{
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
-              flexDirection: { xs: "column", lg: "row" },
+              flexDirection: "column",
             }}
           >
             <Box
@@ -308,7 +302,6 @@ export default function Page4() {
               sx={{
                 bgcolor: "#0E204E",
                 zIndex: 1,
-                // mb: -45,
                 position: "relative",
                 top: -60,
                 width: 350,

@@ -15,24 +15,37 @@ body{
   overflow-y: hidden;
 }
 
-.Page1,.Page2,.Page3,.Page4,.Page5,.Page6{
+.Page1,.Page2,.Page3,.Page4,.Page6{
   height: 100vh;
 }
-.Page6Mobile{
-  height: 30vh;
+.Page5{
+  height: 120vh;
 }
-
-.Page7Mobile{
-  height: 70vh;
-}
-
 .Page7{
   height: 70vh;
 }
+.Page1M,.Page2M{
+  height: 100vh;
+}
+.Page3M{
+  height: 70vh;
+}
+.Page4M{
+  height: 80vh;
+}
+.Page5M{
+  height: 90vh;
+}
+.Page6M{
+  height: 25vh;
+}
+.Page7M{
+  height: 70vh;
+}
 
-.Footer{
-  height: 35vh;
 
+.FooterM{
+  height: 15vh;
 }
 
 .Page3Background{
@@ -43,13 +56,26 @@ body{
 }
 
 .Footer{
-  margin-top: 250px;
-  background-image: url("../image/Footer.png");
-  z-index: -1;
-  width: 100%;
+ margin-top: 250px;
+background-image: url("../image/Footer.png");
+z-index: -1;
+width: 100%;
 height: fit-content;
+background-repeat: no-repeat;
 }
 
-.FooterMobile{
-  height: 15vh;
+
+.Navli{
+  padding: 2px;
+  padding-top: 15px;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: 'Manrope', sans-serif;
+  color: #000000;
 }
+
+.IconClose{
+  padding: 10px;
+}
+
+

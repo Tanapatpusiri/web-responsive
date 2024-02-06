@@ -7,30 +7,21 @@ import Image1 from "../image/Image1-page6.png";
 import Image2 from "../image/Image2-page6.png";
 import checkbox from "../image/checkbox.png";
 import Button from "@mui/material/Button";
-import TextField from "@mui/material/TextField";
+import { Link } from "react-scroll";
+
 export default function Page6() {
   return (
     <>
-    
       <Box
         className="Page6"
         sx={{
-          // pt: -50,
-          mt: { xs: -30, lg: -20 ,md:20 },
-          display: { xs: "none", lg: "block" }
+          pt: 50,
+          display: { xs: "none", lg: "block" },
         }}
       >
-        <Box
-          sx={{
-            pb: 40,
-          }}
-        ></Box>
+        <Box></Box>
 
-        <Box
-          sx={{
-            display: { xs: "none", lg: "block" },
-          }}
-        >
+        <Box>
           <Box
             sx={{
               display: "flex",
@@ -456,11 +447,7 @@ export default function Page6() {
           </Box>
         </Box>
 
-        <Box
-          sx={{
-            display: { xs: "none", lg: "block" },
-          }}
-        >
+        <Box>
           <Box
             sx={{
               display: "flex",
@@ -529,7 +516,16 @@ export default function Page6() {
                       }}
                     >
                       {" "}
-                      Join Now
+                      <Link
+                        to="PageSeven"
+                        spy={true}
+                        smooth={true}
+                        offset={30}
+                        duration={500}
+                      >
+                        {" "}
+                        Join Now
+                      </Link>
                     </Button>
                   </Box>
                 </Box>
@@ -562,14 +558,15 @@ export default function Page6() {
       {/* Mobile */}
 
       <Box
+        className="Page6M"
         sx={{
           display: { xs: "block", lg: "none" },
         }}
       >
         <Box
-          className="Page6Mobile"
           sx={{
-            mt: -10,
+            mt: 70,
+            p: 2,
             bgcolor: "#0E204E",
           }}
         >
@@ -579,7 +576,6 @@ export default function Page6() {
                 textAlign: "center",
                 color: "#ffff",
                 fontWeight: "bold",
-                pt: 5,
               }}
               className={styles.TextPage1}
               variant="h5"
@@ -609,15 +605,21 @@ export default function Page6() {
             <Button
               variant="contained"
               sx={{
-                color: { xs: "#0E204E" },
-                bgcolor: { xs: "#ffff" },
-
-                display: { lg: "none", xs: "block" },
+                color: "#0E204E",
+                bgcolor: "#ffff",
               }}
             >
-              Join Now
+              <Link
+                to="PageSevenM"
+                spy={true}
+                smooth={true}
+                offset={30}
+                duration={500}
+              >
+                {" "}
+                Join Now
+              </Link>
             </Button>
-            
           </Box>
         </Box>
       </Box>

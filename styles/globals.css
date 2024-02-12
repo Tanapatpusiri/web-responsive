@@ -64,6 +64,12 @@ height: fit-content;
 background-repeat: no-repeat;
 }
 
+.NavTextName{
+  font-family: 'Playfair Display', serif;
+  color: #000000;
+  font-weight: bolder;
+  
+}
 
 .Navli{
   padding: 2px;
@@ -78,4 +84,7 @@ background-repeat: no-repeat;
   padding: 10px;
 }
 
-
+.NavMenu{
+  font-family: 'Manrope', sans-serif;
+  font-weight: 400;
+}

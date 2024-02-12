@@ -47,11 +47,16 @@ export default function Navbar() {
                   marginTop: "50px",
                 }}
               >
-                <Box
-                  className="NavName"
-                  sx={{ width: "148px", color: "#0E204E" }}
-                >
-                  <Typography className="NavTextName" variant="h4" gutterBottom>
+                <Box sx={{ width: "148px", color: "#0E204E" }}>
+                  <Typography
+                    variant="h4"
+                    gutterBottom
+                    sx={{
+                      fontFamily: "Playfair Display",
+                      color: "#0E204E",
+                      fontWeight: "bold",
+                    }}
+                  >
                     Pineapple Island
                   </Typography>
                 </Box>
@@ -68,10 +73,11 @@ export default function Navbar() {
                     sx={{
                       paddingRight: "87px",
                       cursor: "pointer",
+                      fontFamily: "Manrope",
+                      color: "#232323",
+                      fontWeight: "bold",
                     }}
-                    className="NavMenu"
                     variant="h6"
-                    gutterBottom
                   >
                     <Link
                       to="PageTwo"
@@ -86,12 +92,13 @@ export default function Navbar() {
                   </Typography>
                   <Typography
                     sx={{
-                      paddingRight: "92px",
+                      paddingRight: "87px",
                       cursor: "pointer",
+                      fontFamily: "Manrope",
+                      color: "#232323",
+                      fontWeight: "bold",
                     }}
-                    className="NavMenu"
                     variant="h6"
-                    gutterBottom
                   >
                     {" "}
                     <Link
@@ -106,10 +113,14 @@ export default function Navbar() {
                     </Link>
                   </Typography>
                   <Typography
-                    sx={{ cursor: "pointer" }}
-                    className="NavMenu"
+                    sx={{
+                      paddingRight: "87px",
+                      cursor: "pointer",
+                      fontFamily: "Manrope",
+                      color: "#232323",
+                      fontWeight: "bold",
+                    }}
                     variant="h6"
-                    gutterBottom
                   >
                     {" "}
                     <Link
@@ -157,12 +168,14 @@ export default function Navbar() {
                     >
                       {" "}
                       <Typography
-                        className="NavMenu"
-                        variant="h6"
-                        gutterBottom
                         sx={{
+                          cursor: "pointer",
+                          fontFamily: "Manrope",
+                          fontWeight: "bold",
                           paddingTop: 1,
                         }}
+                        gutterBottom
+                        variant="h6"
                       >
                         Get in Touch
                       </Typography>
@@ -196,7 +209,15 @@ export default function Navbar() {
                 color: "#0E204E",
               }}
             >
-              <Typography className="NavTextName" variant="h6" gutterBottom>
+              <Typography
+                variant="h6"
+                gutterBottom
+                sx={{
+                  fontFamily: "Playfair Display",
+                  color: "#0E204E",
+                  fontWeight: "bold",
+                }}
+              >
                 Pineapple Island
               </Typography>
             </Box>

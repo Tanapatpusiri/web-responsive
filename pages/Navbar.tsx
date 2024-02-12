@@ -75,7 +75,6 @@ export default function Navbar() {
                       cursor: "pointer",
                       fontFamily: "Manrope",
                       color: "#232323",
-                      fontWeight: "bold",
                     }}
                     variant="h6"
                   >
@@ -92,11 +91,10 @@ export default function Navbar() {
                   </Typography>
                   <Typography
                     sx={{
-                      paddingRight: "87px",
+                      paddingRight: "94px",
                       cursor: "pointer",
                       fontFamily: "Manrope",
                       color: "#232323",
-                      fontWeight: "bold",
                     }}
                     variant="h6"
                   >
@@ -114,11 +112,10 @@ export default function Navbar() {
                   </Typography>
                   <Typography
                     sx={{
-                      paddingRight: "87px",
+                      paddingRight: "-10px",
                       cursor: "pointer",
                       fontFamily: "Manrope",
                       color: "#232323",
-                      fontWeight: "bold",
                     }}
                     variant="h6"
                   >
@@ -137,7 +134,7 @@ export default function Navbar() {
                 </Box>
               </Box>
 
-              <Grid>
+              <Box>
                 <Box
                   sx={{
                     display: "flex",
@@ -147,7 +144,6 @@ export default function Navbar() {
                 >
                   <Button
                     variant="contained"
-                    className="NavMenu"
                     sx={{
                       color: "#ffff",
                       bgcolor: "#0E204E",
@@ -171,7 +167,7 @@ export default function Navbar() {
                         sx={{
                           cursor: "pointer",
                           fontFamily: "Manrope",
-                          fontWeight: "bold",
+
                           paddingTop: 1,
                         }}
                         gutterBottom
@@ -182,7 +178,7 @@ export default function Navbar() {
                     </Link>
                   </Button>
                 </Box>
-              </Grid>
+              </Box>
             </Box>
           </Box>
         </Box>

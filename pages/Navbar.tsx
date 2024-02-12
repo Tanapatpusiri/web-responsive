@@ -1,26 +1,9 @@
-import {
-  Button,
-  Checkbox,
-  Box,
-  Grid,
-  Typography,
-  Fade,
-  FormControlLabel,
-  Drawer,
-  List,
-  ListItem,
-  ListItemButton,
-  ListItemIcon,
-  ListItemText,
-} from "@mui/material";
-import Image from "next/image";
+import { Button, Box, Grid, Typography, Drawer } from "@mui/material";
 import styles from "@/styles/Home.module.css";
-import Icon from "../image/iconnavbar.png";
 import Hamburger from "hamburger-react";
-import Close from "../image/close.png";
 import { useState } from "react";
 import { Link } from "react-scroll";
-import Container from '@mui/material/Container';
+import Container from "@mui/material/Container";
 
 export default function Navbar() {
   const [isOpen, setOpen] = useState(false);
@@ -39,71 +22,79 @@ export default function Navbar() {
       ) {
         return;
       }
-
       setState({ ...state, [anchor]: open });
     };
 
-
   return (
     <>
-      <Box
-        className="NavBar"
-        sx={{
-          display: { xs: "none", lg: "block" },
-        }}
-      >
-         <Container>
+      <Container maxWidth={false} sx={{ maxWidth: "1920px" }}>
+        <Box
+          className="NavBar"
+          sx={{
+            display: { xs: "none", lg: "block" },
+          }}
+        >
           <Box>
-            <Grid container
-            sx={{
-              display: "flex",
-              justifyContent: "space-between",
-            }}
+            <Box
+              sx={{
+                display: "flex",
+                justifyContent: "space-between",
+              }}
             >
-              <Grid>
+              <Box
+                sx={{
+                  marginLeft: "84px",
+                  marginTop: "50px",
+                }}
+              >
                 <Box
                   className="NavName"
-                  sx={{ width: "10%", marginLeft: "10px", marginTop: "50px" }}
+                  sx={{ width: "148px", color: "#0E204E" }}
                 >
-                  <Typography
-                    sx={{}}
-                    className="NavTextName"
-                    variant="h4"
-                    gutterBottom
-                  >
+                  <Typography className="NavTextName" variant="h4" gutterBottom>
                     Pineapple Island
                   </Typography>
                 </Box>
-              </Grid>
+              </Box>
 
-              <Grid>
+              <Box>
                 <Box
                   sx={{
                     display: "flex",
-                    
-                    marginTop: "80px",
-                    marginLeft: "-20px",
+                    marginTop: "81px",
                   }}
                 >
-                  <Typography sx={{
-                    
-                    px:6
-                  }} className="NavMenu" variant="h6" gutterBottom>
+                  <Typography
+                    sx={{
+                      paddingRight: "87px",
+                      cursor: "pointer",
+                    }}
+                    className="NavMenu"
+                    variant="h6"
+                    gutterBottom
+                  >
                     <Link
                       to="PageTwo"
                       spy={true}
                       smooth={true}
                       offset={30}
                       duration={500}
-                      
                     >
                       {" "}
                       About Us{" "}
                     </Link>
                   </Typography>
-                  <Typography sx={{
-                    px:6
-                  }} className="NavMenu" variant="h6" gutterBottom>                    <Link
+                  <Typography
+                    sx={{
+                      paddingRight: "92px",
+                      cursor: "pointer",
+                    }}
+                    className="NavMenu"
+                    variant="h6"
+                    gutterBottom
+                  >
+                    {" "}
+                    <Link
                       to="Pagefour"
                       spy={true}
                       smooth={true}
@@ -114,9 +105,14 @@ export default function Navbar() {
                       What we do{" "}
                     </Link>
                   </Typography>
-                  <Typography sx={{
-                    px:6
-                  }} className="NavMenu" variant="h6" gutterBottom>                    <Link
+                  <Typography
+                    sx={{ cursor: "pointer" }}
+                    className="NavMenu"
+                    variant="h6"
+                    gutterBottom
+                  >
+                    {" "}
+                    <Link
                       to="Pagefive"
                       spy={true}
                       smooth={true}
@@ -128,7 +124,7 @@ export default function Navbar() {
                     </Link>
                   </Typography>
                 </Box>
-              </Grid>
+              </Box>
 
               <Grid>
                 <Box
@@ -146,8 +142,8 @@ export default function Navbar() {
                       bgcolor: "#0E204E",
                       zIndex: 1,
                       borderRadius: 0,
-                      marginTop: "65px",
-                      marginRight: "100px",
+                      marginTop: "68px",
+                      marginRight: "50px",
                       px: 4,
                     }}
                   >
@@ -160,45 +156,54 @@ export default function Navbar() {
                       duration={500}
                     >
                       {" "}
-                      <Typography className="NavMenu" variant="h6" gutterBottom>
+                      <Typography
+                        className="NavMenu"
+                        variant="h6"
+                        gutterBottom
+                        sx={{
+                          paddingTop: 1,
+                        }}
+                      >
                         Get in Touch
                       </Typography>
                     </Link>
                   </Button>
                 </Box>
               </Grid>
-            </Grid>
+            </Box>
           </Box>
-          </Container>
-      
-      </Box>
+        </Box>
 
-      <Box
-        sx={{
-          display: { xs: "block", lg: "none" },
-        }}
-      >
-        <Grid container>
-          <Grid xs>
+        {/* mobile */}
+
+        <Box
+          sx={{
+            display: { xs: "block", lg: "none" },
+          }}
+        >
+          <Box
+            sx={{
+              display: "flex",
+              justifyContent: "space-between",
+            }}
+          >
             <Box
               className="NavName"
-              sx={{ width: "10%", marginLeft: "20px", marginTop: "50px" }}
+              sx={{
+                width: "10%",
+                marginLeft: "4px",
+                marginTop: "50px",
+                color: "#0E204E",
+              }}
             >
-              <Typography
-                sx={{}}
-                className="NavTextName"
-                variant="h6"
-                gutterBottom
-              >
+              <Typography className="NavTextName" variant="h6" gutterBottom>
                 Pineapple Island
               </Typography>
             </Box>
-          </Grid>
-          <Grid>
+
             <Box
               sx={{
                 marginTop: "65px",
-                marginRight: 3,
               }}
             >
               {(["right"] as const).map((anchor) => (
@@ -209,6 +214,7 @@ export default function Navbar() {
                     toggled={isOpen}
                     toggle={setOpen}
                     onToggle={toggleDrawer(anchor, true) as any}
+                    size={24}
                   />
 
                   <Drawer
@@ -228,6 +234,7 @@ export default function Navbar() {
                       duration={0.5}
                       toggled={isOpen}
                       onToggle={toggleDrawer(anchor, false) as any}
+                      size={24}
                     />
                     <Box
                       sx={{
@@ -310,9 +317,9 @@ export default function Navbar() {
                 </Box>
               ))}
             </Box>
-          </Grid>
-        </Grid>
-      </Box>
+          </Box>
+        </Box>
+      </Container>
     </>
   );
 }

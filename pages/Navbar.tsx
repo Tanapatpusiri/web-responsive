@@ -25,7 +25,7 @@ export default function Navbar() {
             >
               <Box
                 sx={{
-                  marginLeft: "84px",
+                  marginLeft: "77px",
                   marginTop: "50px",
                 }}
               >
@@ -48,12 +48,13 @@ export default function Navbar() {
                 <Box
                   sx={{
                     display: "flex",
-                    marginTop: "81px",
+                    marginTop: "79px",
                   }}
                 >
                   <Typography
                     sx={{
                       paddingRight: "87px",
+                      paddingLeft:'48px',
                       cursor: "pointer",
                       fontFamily: "Manrope",
                       color: "#232323",
@@ -94,7 +95,6 @@ export default function Navbar() {
                   </Typography>
                   <Typography
                     sx={{
-                      paddingRight: "-10px",
                       cursor: "pointer",
                       fontFamily: "Manrope",
                       color: "#232323",
@@ -132,8 +132,9 @@ export default function Navbar() {
                       zIndex: 1,
                       borderRadius: 0,
                       marginTop: "68px",
-                      marginRight: "50px",
-                      px: 4,
+                      marginRight: "62px",
+                      width:"188px",
+                      height:"50px"
                     }}
                   >
                     {" "}
@@ -150,9 +151,9 @@ export default function Navbar() {
                           cursor: "pointer",
                           fontFamily: "Manrope",
 
-                          paddingTop: 1,
+                          
                         }}
-                        gutterBottom
+                      
                         variant="h6"
                       >
                         Get in Touch

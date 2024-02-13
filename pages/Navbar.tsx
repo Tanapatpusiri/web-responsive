@@ -6,25 +6,7 @@ import { Link } from "react-scroll";
 import Container from "@mui/material/Container";
 
 export default function Navbar() {
-  const [isOpen, setOpen] = useState(false);
-  type Anchor = "right";
-  const [state, setState] = useState({
-    right: false,
-  });
-
-  const toggleDrawer =
-    (anchor: Anchor, open: boolean) =>
-    (event: React.KeyboardEvent | React.MouseEvent) => {
-      if (
-        event.type === "keydown" &&
-        ((event as React.KeyboardEvent).key === "Tab" ||
-          (event as React.KeyboardEvent).key === "Shift")
-      ) {
-        return;
-      }
-      setState({ ...state, [anchor]: open });
-    };
-
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <>
       <Container maxWidth={false} sx={{ maxWidth: "1920px" }}>
@@ -223,116 +205,101 @@ export default function Navbar() {
                 marginTop: "65px",
               }}
             >
-              {(["right"] as const).map((anchor) => (
-                <Box key={anchor}>
+              <Box>
+                <Hamburger
+                  color="#0E204E"
+                  duration={0.8}
+                  toggled={isOpen}
+                  toggle={setIsOpen}
+                  size={24}
+                />
+
+                <Drawer
+                  transitionDuration={{ enter: 700, exit: 800 }}
+                  sx={{
+                    display: { xs: "block", lg: "none" },
+                  }}
+                  anchor={"right"}
+                  open={isOpen}
+                  onClose={() => setIsOpen(false)}
+                >
                   <Hamburger
                     color="#0E204E"
-                    duration={0.8}
+                    duration={0.5}
                     toggled={isOpen}
-                    toggle={setOpen}
-                    onToggle={toggleDrawer(anchor, true) as any}
+                    onToggle={() => setIsOpen(false)}
                     size={24}
                   />
-
-                  <Drawer
-                    transitionDuration={{ enter: 700, exit: 800 }}
+                  <Box
                     sx={{
-                      display: { xs: "block", lg: "none" },
-                    }}
-                    anchor={anchor}
-                    open={state[anchor]}
-                    onClose={toggleDrawer(anchor, false)}
-                    onClickCapture={() => {
-                      setOpen(false);
+                      padding: 4,
                     }}
                   >
-                    <Hamburger
-                      color="#0E204E"
-                      duration={0.5}
-                      toggled={isOpen}
-                      onToggle={toggleDrawer(anchor, false) as any}
-                      size={24}
-                    />
-                    <Box
+                    <Typography
+                      className={styles.NavMenu}
+                      variant="h6"
+                      gutterBottom
                       sx={{
-                        padding: 4,
+                        cursor: "pointer",
+                        paddingBottom: 2,
                       }}
                     >
-                      <Typography
-                        className={styles.NavMenu}
-                        variant="h6"
-                        gutterBottom
-                        sx={{
-                          cursor: "pointer",
-                          paddingBottom: 2,
-                        }}
+                      <Link
+                        to="PageTwo"
+                        spy={true}
+                        smooth={true}
+                        offset={30}
+                        duration={500}
+                        onClick={() => setIsOpen(false)}
                       >
-                        <Link
-                          to="PageTwo"
-                          spy={true}
-                          smooth={true}
-                          offset={30}
-                          duration={500}
-                          onClick={toggleDrawer(anchor, false) as any}
-                          onClickCapture={() => {
-                            setOpen(false);
-                          }}
-                        >
-                          {" "}
-                          About Us{" "}
-                        </Link>
-                      </Typography>
-                      <Typography
-                        className={styles.NavMenu}
-                        variant="h6"
-                        gutterBottom
-                        sx={{
-                          cursor: "pointer",
-                          paddingBottom: 2,
-                        }}
+                        {" "}
+                        About Us{" "}
+                      </Link>
+                    </Typography>
+                    <Typography
+                      className={styles.NavMenu}
+                      variant="h6"
+                      gutterBottom
+                      sx={{
+                        cursor: "pointer",
+                        paddingBottom: 2,
+                      }}
+                    >
+                      <Link
+                        to="Pagefour"
+                        spy={true}
+                        smooth={true}
+                        offset={30}
+                        duration={500}
+                        onClick={() => setIsOpen(false)}
                       >
-                        <Link
-                          to="Pagefour"
-                          spy={true}
-                          smooth={true}
-                          offset={30}
-                          duration={500}
-                          onClick={toggleDrawer(anchor, false) as any}
-                          onClickCapture={() => {
-                            setOpen(false);
-                          }}
-                        >
-                          {" "}
-                          What we do{" "}
-                        </Link>
-                      </Typography>
-                      <Typography
-                        className={styles.NavMenu}
-                        variant="h6"
-                        gutterBottom
-                        sx={{
-                          cursor: "pointer",
-                        }}
+                        {" "}
+                        What we do{" "}
+                      </Link>
+                    </Typography>
+                    <Typography
+                      className={styles.NavMenu}
+                      variant="h6"
+                      gutterBottom
+                      sx={{
+                        cursor: "pointer",
+                      }}
+                    >
+                      <Link
+                        to="Pagefive"
+                        spy={true}
+                        smooth={true}
+                        offset={30}
+                        duration={500}
+                        onClick={() => setIsOpen(false)}
                       >
-                        <Link
-                          to="Pagefive"
-                          spy={true}
-                          smooth={true}
-                          offset={30}
-                          duration={500}
-                          onClick={toggleDrawer(anchor, false) as any}
-                          onClickCapture={() => {
-                            setOpen(false);
-                          }}
-                        >
-                          {" "}
-                          Project{" "}
-                        </Link>
-                      </Typography>
-                    </Box>
-                  </Drawer>
-                </Box>
-              ))}
+                        {" "}
+                        Project{" "}
+                      </Link>
+                    </Typography>
+                  </Box>
+                </Drawer>
+              </Box>
             </Box>
           </Box>
         </Box>

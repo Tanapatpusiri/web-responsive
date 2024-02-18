@@ -1,53 +1,65 @@
-import Button from "@mui/material/Button";
-import Checkbox from "@mui/material/Checkbox";
-import Box from "@mui/material/Box";
-import Grid from "@mui/material/Unstable_Grid2";
-import Image from "next/image";
+import { Button, Box, Grid, Typography, Drawer } from "@mui/material";
 import styles from "@/styles/Home.module.css";
-import Typography from "@mui/material/Typography";
-import Icon from "../image/iconnavbar.png";
-import Close from "../image/close.png";
-import Fade from "@mui/material/Fade";
+import Hamburger from "hamburger-react";
 import { useState } from "react";
-import FormControlLabel from "@mui/material/FormControlLabel";
 import { Link } from "react-scroll";
-export default function Navbar() {
-  const [checked, setChecked] = useState(false);
-  const handleChange = () => {
-    setChecked((prev) => !prev);
-  };
+import Container from "@mui/material/Container";
 
+export default function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <>
-      <div className="NavBar">
-        <nav>
+      <Container maxWidth={false} sx={{ maxWidth: "1920px" }}>
+        <Box
+          className="NavBar"
+          sx={{
+            display: { xs: "none", lg: "block" },
+          }}
+        >
           <Box>
-            <Grid container spacing={2}>
-              <Grid xs>
-                <Box className={styles.NavName}>
+            <Box
+              sx={{
+                display: "flex",
+                justifyContent: "space-between",
+              }}
+            >
+              <Box
+                sx={{
+                  marginLeft: "77px",
+                  marginTop: "50px",
+                }}
+              >
+                <Box sx={{ width: "148px", color: "#0E204E" }}>
                   <Typography
-                    sx={{ ml: { lg: 10, xs: 2 } }}
-                    className={styles.NavTextName}
-                    variant="h6"
+                    variant="h4"
                     gutterBottom
+                    sx={{
+                      fontFamily: "Playfair Display",
+                      color: "#0E204E",
+                      fontWeight: "bold",
+                    }}
                   >
                     Pineapple Island
                   </Typography>
                 </Box>
-              </Grid>
+              </Box>
 
-              <Grid xs>
+              <Box>
                 <Box
                   sx={{
                     display: "flex",
-                    justifyContent: "space-between",
-                    mt: { xs: -10, lg: 4 },
+                    marginTop: "79px",
                   }}
                 >
                   <Typography
-                    className={styles.NavMenu}
-                    variant="subtitle2"
-                    gutterBottom
+                    sx={{
+                      paddingRight: "87px",
+                      paddingLeft:'48px',
+                      cursor: "pointer",
+                      fontFamily: "Manrope",
+                      color: "#232323",
+                    }}
+                    variant="h6"
                   >
                     <Link
                       to="PageTwo"
@@ -61,10 +73,15 @@ export default function Navbar() {
                     </Link>
                   </Typography>
                   <Typography
-                    className={styles.NavMenu}
-                    variant="subtitle2"
-                    gutterBottom
+                    sx={{
+                      paddingRight: "94px",
+                      cursor: "pointer",
+                      fontFamily: "Manrope",
+                      color: "#232323",
+                    }}
+                    variant="h6"
                   >
+                    {" "}
                     <Link
                       to="Pagefour"
                       spy={true}
@@ -77,10 +94,14 @@ export default function Navbar() {
                     </Link>
                   </Typography>
                   <Typography
-                    className={styles.NavMenu}
-                    variant="subtitle2"
-                    gutterBottom
+                    sx={{
+                      cursor: "pointer",
+                      fontFamily: "Manrope",
+                      color: "#232323",
+                    }}
+                    variant="h6"
                   >
+                    {" "}
                     <Link
                       to="Pagefive"
                       spy={true}
@@ -93,9 +114,9 @@ export default function Navbar() {
                     </Link>
                   </Typography>
                 </Box>
-              </Grid>
+              </Box>
 
-              <Grid xs>
+              <Box>
                 <Box
                   sx={{
                     display: "flex",
@@ -106,11 +127,14 @@ export default function Navbar() {
                   <Button
                     variant="contained"
                     sx={{
-                      color: { xs: "#0E204E", lg: "#ffff" },
-                      bgcolor: { xs: "#ffff", lg: "#0E204E" },
-                      zIndex: { xs: 1 },
-                      mt: { xs: -20, lg: 3 },
-                      mr: { lg: 6 },
+                      color: "#ffff",
+                      bgcolor: "#0E204E",
+                      zIndex: 1,
+                      borderRadius: 0,
+                      marginTop: "68px",
+                      marginRight: "62px",
+                      width:"188px",
+                      height:"50px"
                     }}
                   >
                     {" "}
@@ -122,107 +146,165 @@ export default function Navbar() {
                       duration={500}
                     >
                       {" "}
-                      Get in Touch
+                      <Typography
+                        sx={{
+                          cursor: "pointer",
+                          fontFamily: "Manrope",
+
+                          
+                        }}
+                      
+                        variant="h6"
+                      >
+                        Get in Touch
+                      </Typography>
                     </Link>
                   </Button>
-
-                  <Box
-                    sx={{
-                      pt: { xs: 3, lg: 1 },
-                      ml: { lg: -10 },
-                      mr: { xs: 2 },
-                    }}
-                  >
-                    <FormControlLabel
-                      control={
-                        <Checkbox
-                          onChange={handleChange}
-                          sx={{ display: "none" }}
-                        />
-                      }
-                      label={
-                        <Image
-                          className={styles.NavMenu}
-                          src={Icon}
-                          width={30}
-                          priority
-                          alt=""
-                        />
-                      }
-                    ></FormControlLabel>
-                  </Box>
                 </Box>
-              </Grid>
-              <Box
+              </Box>
+            </Box>
+          </Box>
+        </Box>
+
+        {/* mobile */}
+
+        <Box
+          sx={{
+            display: { xs: "block", lg: "none" },
+          }}
+        >
+          <Box
+            sx={{
+              display: "flex",
+              justifyContent: "space-between",
+            }}
+          >
+            <Box
+              className="NavName"
+              sx={{
+                width: "10%",
+                marginLeft: "4px",
+                marginTop: "50px",
+                color: "#0E204E",
+              }}
+            >
+              <Typography
+                variant="h6"
+                gutterBottom
                 sx={{
-                  display: "flex",
+                  fontFamily: "Playfair Display",
+                  color: "#0E204E",
+                  fontWeight: "bold",
                 }}
               >
-                <Fade in={checked}>
-                  <ul className={styles.sidebar} id="sidebar">
-                    <FormControlLabel
-                      control={
-                        <Checkbox
-                          onChange={handleChange}
-                          sx={{ display: "none" }}
-                        />
-                      }
-                      label={
-                        <Image
-                          className="IconClose"
-                          src={Close}
-                          width={50}
-                          priority
-                          alt=""
-                        />
-                      }
-                    ></FormControlLabel>
-                    <li className="Navli">
-                      {" "}
+                Pineapple Island
+              </Typography>
+            </Box>
+
+            <Box
+              sx={{
+                marginTop: "65px",
+              }}
+            >
+              <Box>
+                <Hamburger
+                  color="#0E204E"
+                  duration={0.8}
+                  toggled={isOpen}
+                  toggle={setIsOpen}
+                  size={24}
+                />
+
+                <Drawer
+                  transitionDuration={{ enter: 700, exit: 800 }}
+                  sx={{
+                    display: { xs: "block", lg: "none" },
+                  }}
+                  anchor={"right"}
+                  open={isOpen}
+                  onClose={() => setIsOpen(false)}
+                >
+                  <Hamburger
+                    color="#0E204E"
+                    duration={0.5}
+                    toggled={isOpen}
+                    onToggle={() => setIsOpen(false)}
+                    size={24}
+                  />
+                  <Box
+                    sx={{
+                      padding: 4,
+                    }}
+                  >
+                    <Typography
+                      className={styles.NavMenu}
+                      variant="h6"
+                      gutterBottom
+                      sx={{
+                        cursor: "pointer",
+                        paddingBottom: 2,
+                      }}
+                    >
                       <Link
-                        to="PageTwoM"
+                        to="PageTwo"
                         spy={true}
                         smooth={true}
-                        offset={50}
+                        offset={30}
                         duration={500}
+                        onClick={() => setIsOpen(false)}
                       >
                         {" "}
                         About Us{" "}
                       </Link>
-                    </li>
-                    <li className="Navli">
-                      {" "}
+                    </Typography>
+                    <Typography
+                      className={styles.NavMenu}
+                      variant="h6"
+                      gutterBottom
+                      sx={{
+                        cursor: "pointer",
+                        paddingBottom: 2,
+                      }}
+                    >
                       <Link
-                        to="PageFourM"
+                        to="Pagefour"
                         spy={true}
                         smooth={true}
-                        offset={50}
+                        offset={30}
                         duration={500}
+                        onClick={() => setIsOpen(false)}
                       >
                         {" "}
                         What we do{" "}
                       </Link>
-                    </li>
-                    <li className="Navli">
-                      {" "}
+                    </Typography>
+                    <Typography
+                      className={styles.NavMenu}
+                      variant="h6"
+                      gutterBottom
+                      sx={{
+                        cursor: "pointer",
+                      }}
+                    >
                       <Link
-                        to="PageFiveM"
+                        to="Pagefive"
                         spy={true}
                         smooth={true}
-                        offset={50}
+                        offset={30}
                         duration={500}
+                        onClick={() => setIsOpen(false)}
                       >
                         {" "}
                         Project{" "}
                       </Link>
-                    </li>
-                  </ul>
-                </Fade>
+                    </Typography>
+                  </Box>
+                </Drawer>
               </Box>
-            </Grid>
+            </Box>
           </Box>
-        </nav>
-      </div>
+        </Box>
+      </Container>
     </>
   );
 }

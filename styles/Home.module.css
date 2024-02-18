@@ -13,18 +13,9 @@
   width: 10%;
 }
 
-.NavTextName{
-  font-family: 'Playfair Display', serif;
-  color: #0E204E;
-  font-weight: bolder;
-  margin-top: 15px;
-}
 
-.NavMenu{
-  font-family: 'Manrope', sans-serif;
-  color: #0E204E;
-  cursor: pointer;
-}
+
+
 
 .TextPage1{
   font-family: "Playfair Display";

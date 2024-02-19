@@ -1,207 +1,87 @@
-import Box from "@mui/material/Box";
-import Grid from "@mui/material/Unstable_Grid2";
+import { Box, Grid, Typography } from "@mui/material";
 import Image from "next/image";
-import styles from "@/styles/Home.module.css";
-import Typography from "@mui/material/Typography";
-import page1 from "../image/Image6-page5.png";
 import page2 from "../image/page2.png";
-import page3 from "../image/Image1-page5.png";
-import page4 from "../image/Image2-page5.png";
-import page5 from "../image/Image3-page5.png";
-
 import "bootstrap/dist/css/bootstrap.min.css";
 import Carousel from "react-bootstrap/Carousel";
+import { Container } from "@mui/material";
 export default function Page2() {
   return (
     <>
-      <Box sx={{ display: { lg: "block", xs: "none" } }}>
+      <Container maxWidth="xl">
         <Box
-          className="Page2"
-          id="PageTwo"
-          sx={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
+          sx={{ display: { md: "block", xs: "none" }, paddingBottom: "180px" }}
         >
-          <Box sx={{}}>
-            <Box>
+          <Box
+            id="PageTwo"
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <Grid container>
               <Grid
-                container
+                item
+                xs
                 sx={{
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
                 }}
               >
-                <Grid
-                  xs
+                <Box
                   sx={{
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
+                    width: "250px",
                   }}
                 >
-                  <Box className={styles.DivTextPage2}>
-                    <Box sx={{ display: "block" }}>
-                      <Typography
-                        sx={{ textAlign: "center" }}
-                        className={styles.NavTextName}
-                        variant="h4"
-                        gutterBottom
-                      >
-                        About Pineapple Island
-                      </Typography>
-                    </Box>
-                  </Box>
-                </Grid>
+                  <Typography variant="h3" gutterBottom>
+                    About Pineapple Island
+                  </Typography>
+                </Box>
+              </Grid>
 
-                <Grid>
-                  <Box sx={{ display: "block" }}>
-                    <Carousel slide={false}>
-                      <Carousel.Item>
-                        <Image src={page1} priority width={600} alt="" />
-                      </Carousel.Item>
-                      <Carousel.Item>
-                        <Image src={page2} priority width={600} alt="" />
-                      </Carousel.Item>
-                      <Carousel.Item>
-                        <Image src={page3} priority width={600} alt="" />
-                      </Carousel.Item>
-                      <Carousel.Item>
-                        <Image src={page4} priority width={600} alt="" />
-                      </Carousel.Item>
-                      <Carousel.Item>
-                        <Image src={page5} priority width={600} alt="" />
-                      </Carousel.Item>
-                    </Carousel>
-                  </Box>
-                </Grid>
-                <Grid
-                  xs
+              <Grid item xs>
+                <Box
+                  sx={{
+                    display: "flex",
+                    flexDirection: "row",
+                  }}
+                >
+                  <Carousel style={{ width: "min(40.8vw,728px)" }}>
+                    <Carousel.Item>
+                      <Image src={page2} priority alt="" />
+                    </Carousel.Item>
+                    <Carousel.Item>
+                      <Image src={page2} priority alt="" />
+                    </Carousel.Item>
+                    <Carousel.Item>
+                      <Image src={page2} priority alt="" />
+                    </Carousel.Item>
+                    <Carousel.Item>
+                      <Image src={page2} priority alt="" />
+                    </Carousel.Item>
+                    <Carousel.Item>
+                      <Image src={page2} priority alt="" />
+                    </Carousel.Item>
+                  </Carousel>
+                </Box>
+              </Grid>
+              <Grid item xs>
+                <Box
                   sx={{
                     bgcolor: "#0E204E",
                     color: "#ffff",
-                    height: 510,
-                    width: 500,
+                    height: "620px",
+                    maxHeight: "620px",
+                    width: "22.25vw",
                     zIndex: 1,
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
-                    mr: 15,
                   }}
                 >
-                  <Box>
-                    <Box className={styles.TextRectanglePage2}>
-                      <Box sx={{ display: "block" }}>
-                        <Typography
-                          sx={{
-                            p: 8,
-
-                            color: "#ffff",
-                            display: "block",
-                          }}
-                          className={styles.TextRectanglePage2}
-                          variant="subtitle2"
-                          gutterBottom
-                        >
-                          Pineapple Island is the most sought-after community in
-                          Ibadan that values and puts the needs of their clients
-                          first. It is a territory with loft complexes that
-                          creates a country life and homely feeling that is
-                          integrated with industrial development. A perfect,
-                          professional built abode that gives you the true taste
-                          of beauty and happiness.
-                        </Typography>
-                      </Box>
-                    </Box>
-                  </Box>
-                </Grid>
-              </Grid>
-            </Box>
-          </Box>
-        </Box>
-      </Box>
-
-      {/* Moblie */}
-
-      <Box sx={{ display: { lg: "none", xs: "block" } }}>
-        <div className="Page2M" id="PageTwoM">
-          <Box
-            sx={{
-              mt: -10,
-            }}
-          >
-            <Box>
-              <Grid
-                container
-                sx={{
-                  display: "flex",
-                  flexDirection: "column",
-                }}
-              >
-                <Grid
-                  xs
-                  sx={{
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                  }}
-                >
-                  <Box
-                    className={styles.DivTextPage2}
-                    sx={{
-                      zIndex: 1,
-                    }}
-                  >
-                    <Box>
-                      <Typography
-                        sx={{
-                          textAlign: "center",
-                        }}
-                        className={styles.TextPage2}
-                        variant="h5"
-                        gutterBottom
-                      >
-                        About{" "}
-                      </Typography>
-                      <Typography
-                        sx={{
-                          textAlign: "center",
-                          mb: 3,
-                        }}
-                        className={styles.TextPage2}
-                        variant="h5"
-                        gutterBottom
-                      >
-                        Pineapple Island{" "}
-                      </Typography>
-                    </Box>
-                  </Box>
-                </Grid>
-
-                <Grid>
-                  <Box>
-                    <Image
-                      className={styles.ImageMobile}
-                      src={page2}
-                      priority
-                      width={450}
-                      alt=""
-                    />
-                    <Typography
-                      sx={{
-                        p: 12,
-                        zIndex: 1,
-                        color: "#ffff",
-                        position: "absolute",
-                        mt: -50,
-                        textAlign: "center",
-                      }}
-                      className={styles.TextRectanglePage2}
-                      variant="subtitle2"
-                      gutterBottom
-                    >
+                  <Box sx={{ display: "flex", px: "12%", paddingTop: "10%" }}>
+                    <Typography variant="subtitle2" gutterBottom>
                       Pineapple Island is the most sought-after community in
                       Ibadan that values and puts the needs of their clients
                       first. It is a territory with loft complexes that creates
@@ -211,12 +91,106 @@ export default function Page2() {
                       happiness.
                     </Typography>
                   </Box>
-                </Grid>
+                </Box>
               </Grid>
-            </Box>
+            </Grid>
           </Box>
-        </div>
-      </Box>
+        </Box>
+
+        {/* Moblie */}
+
+        <Box sx={{ display: { md: "none", xs: "block" } }}>
+          <div id="PageTwoM">
+            <Box
+              sx={{
+                paddingBottom: "50px",
+              }}
+            >
+              <Box>
+                <Grid
+                  container
+                  sx={{
+                    display: "flex",
+                    flexDirection: "column",
+                  }}
+                >
+                  <Grid
+                    xs
+                    sx={{
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                    }}
+                  >
+                    <Box
+                      sx={{
+                        zIndex: 1,
+                        textAlign: "center",
+                      }}
+                    >
+                      <Box>
+                        <Typography variant="subtitle1" gutterBottom>
+                          About{" "}
+                        </Typography>
+                        <Typography variant="subtitle1" gutterBottom>
+                          Pineapple Island{" "}
+                        </Typography>
+                      </Box>
+                    </Box>
+                  </Grid>
+
+                  <Grid
+                    sx={{
+                      display: "flex",
+                      justifyContent: "center",
+                      textAlign: "center",
+                    }}
+                  >
+                    <Box
+                      sx={{
+                        display: "flex",
+                        justifyContent: "center",
+                      }}
+                    >
+                      <Image
+                        src={page2}
+                        priority
+                        alt=""
+                        style={{
+                          width: "max(80.8vw,335px)",
+                          filter: "brightness(50%)",
+                          maxHeight: "392px",
+                          opacity: "90%",
+                        }}
+                      />
+                      <Typography
+                        sx={{
+                          px: "15%",
+                          zIndex: 1,
+                          color: "#ffff",
+                          position: "absolute",
+                          mt: 15,
+                          textAlign: "center",
+                        }}
+                        variant="subtitle2"
+                        gutterBottom
+                      >
+                        Pineapple Island is the most sought-after community in
+                        Ibadan that values and puts the needs of their clients
+                        first. It is a territory with loft complexes that
+                        creates a country life and homely feeling that is
+                        integrated with industrial development. A perfect,
+                        professional built abode that gives you the true taste
+                        of beauty and happiness.
+                      </Typography>
+                    </Box>
+                  </Grid>
+                </Grid>
+              </Box>
+            </Box>
+          </div>
+        </Box>
+      </Container>
     </>
   );
 }
